@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>To Do List</h1>
+    <a href="/tasks"><button type="button" class="btn btn-primary">View Task</button></a>
+    <a href="/create_task"><button type="button" class="btn btn-primary">Create Task</button></a>
+    <a href="/all_complete_tasks"><button type="button" class="btn btn-primary">All Complete Task</button></a>
+    <a href="/all_uncomplete_tasks"><button type="button" class="btn btn-primary">All Uncomplete Task</button></a>
+    <a href="/search_by_deadline"><button type="button" class="btn btn-primary">Search by deadline</button></a>
+{% endblock %}

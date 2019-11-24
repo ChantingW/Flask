@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>task_name</th>
+        <th>description</th>
+        <th>deadline</th>
+        <th>state</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for task in tasks %}
+    <tr>
+      <td>{{task.task_name}}</td>
+      <td>{{task.description}}</td>
+      <td>{{task.deadline}}</td>
+      <td>{{task.state}}</td>
+      <td><a href="/edit_task/{{task.task_id}}"><button type="button" class="btn btn-primary">Edit</button></a>
+      <td><a href="/delete_task/{{task.task_id}}"><button type="button"
+            onclick="{if(confirm('Are you sure to delete this task?')){this.document.formname.submit();return true;}return false;}" class="btn btn-primary">Delete</button></a></td>
+      <td><a href="/mark_task/{{task.task_id}}"><button type="button" class="btn btn-primary">Mark</button></a></td>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
