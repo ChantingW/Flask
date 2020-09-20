@@ -1,2 +1,2 @@
 # Flask app(University records)
-Software Engineering Coursewok 2
+Software Engineering Coursework 2
